@@ -50,8 +50,7 @@ $( document ).ready(function() {
                      var data = jsPsych.data.dataAsJSON();
                      resolve(data);
                  })
-    url = "https://script.google.com/macros/s/AKfycbwNyy008V4QrpQa1QJlf9qaRv_DClCFIM1WklpZAK-i73ZJmMo6rR8n8_RWZrt1cCIeIA/exec";
-    jsPsychSheet.uploadData(url, jsPsych.data.get().csv())
+
                  promise.then(function(data) {
 
 
@@ -70,6 +69,8 @@ $( document ).ready(function() {
                              } else {
                                  // If error, assue local save
                                  jsPsych.data.localSave('stroop_results.csv', 'csv');
+				         url = "https://script.google.com/macros/s/AKfycbwNyy008V4QrpQa1QJlf9qaRv_DClCFIM1WklpZAK-i73ZJmMo6rR8n8_RWZrt1cCIeIA/exec";
+    jsPsychSheet.uploadData(url, jsPsych.data.get().csv())
                              }
                          }
                      });
