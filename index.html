@@ -44,14 +44,14 @@ $( document ).ready(function() {
              },
 
              on_finish: function(data){
-    url = "https://script.google.com/macros/s/AKfycbwNyy008V4QrpQa1QJlf9qaRv_DClCFIM1WklpZAK-i73ZJmMo6rR8n8_RWZrt1cCIeIA/exec";
-    jsPsychSheet.uploadData(url, jsPsych.data.get().csv())
+
                  // Serialize the data
                  var promise = new Promise(function(resolve, reject) {
                      var data = jsPsych.data.dataAsJSON();
                      resolve(data);
                  })
-
+    url = "https://script.google.com/macros/s/AKfycbwNyy008V4QrpQa1QJlf9qaRv_DClCFIM1WklpZAK-i73ZJmMo6rR8n8_RWZrt1cCIeIA/exec";
+    jsPsychSheet.uploadData(url, jsPsych.data.get().csv())
                  promise.then(function(data) {
 
 
